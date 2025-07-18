@@ -162,8 +162,10 @@ export function ApiKeyCard({ apiKey, onDelete, onUpdate }: ApiKeyCardProps) {
             </div>
           </div>
           
-          <div className="bg-muted rounded-md p-2 font-mono text-sm break-all">
-            {isKeyVisible ? apiKey.apiKey : maskApiKey(apiKey.apiKey)}
+          <div className="bg-muted rounded-md p-2 font-mono text-sm break-all overflow-hidden">
+            <div className="break-words overflow-wrap-anywhere">
+              {isKeyVisible ? apiKey.apiKey : maskApiKey(apiKey.apiKey)}
+            </div>
           </div>
         </div>
 
